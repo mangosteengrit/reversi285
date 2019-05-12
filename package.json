@@ -1,0 +1,26 @@
+{
+  "name": "reversi",
+  "version": "1.0.0",
+  "description": "This is me making the game reversi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mangosteengrit/reversi285.git"
+  },
+  "keywords": [
+    "reversi"
+  ],
+  "author": "Q",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mangosteengrit/reversi285/issues"
+  },
+  "homepage": "https://github.com/mangosteengrit/reversi285#readme",
+  "dependencies": {
+    "node-static": "^0.7.11",
+    "socket.io": "^2.2.0"
+  }
+}
