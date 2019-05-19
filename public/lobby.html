@@ -26,13 +26,29 @@
       <h2>Lobby</h2>
       </div>
     </div>
+
     <div class='row'>
-      <div class='col'>
+      <div class='col text-left'>
           <h3>Messages</h3>
           <div id='messages'>
           </div>
       </div>
     </div>
+
+    <div class='row'>
+      <div class='col text-left'>
+          <form onsubmit='send_message(); return false;'>
+
+            <div class='form-group'>
+              <label for='send_message_holder' class='col-form-label sr-only'>Enter chat message</label>
+              <input class='form-control' type='text' value='' id='send_message_holder' placeholder='Enter chat message' autocomplete='off'/>
+            </div>
+            <button type='submit' class='btn btn-default btn-primary'>Send</button>
+
+          </form>
+      </div>
+    </div>
+
 
   </div>
 
@@ -43,7 +59,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    
-      <script src='js/main.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js" integrity="sha256-i2Orhi397HWPn93rsCUTW8HBoso65vY/VNTllm9Kuqo=" crossorigin="anonymous"></script>
+    <script src='js/main.js'></script>
   </body>
 </html>
