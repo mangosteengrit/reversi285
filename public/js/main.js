@@ -58,7 +58,7 @@ function send_message(){
 	socket.emit('send_message',payload);
 }
 
-/* in jquery to run a command only once webpage has completely loaded is $(function () {}*/
+/* in jquery to run a command only once webpage has completely loaded is $(function () {} */
 $(function(){
 	var payload = {};
 	payload.room = chat_room;
