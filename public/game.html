@@ -27,7 +27,7 @@
 
 
   	<div class='row'>
-  		<div class='col'>
+  		<div class='col score_color'>
   			<span class='align-middle' id='whitesum'></span>
   			<img src='assets/images/wtoken.png' alt='white score'/>
   			<img src='assets/images/btoken.png' alt='black score'/>
@@ -132,9 +132,9 @@
 
     <div class='row'>
       <div class='col text-left'>
-      	  <h3>Messages</h3>
+      	  <h3 class="chat_color">Messages</h3>
           <form class='form-inline' onsubmit='send_message(); return false;'>
-
+ 
               <label for='send_message_holder' class='col-form-label sr-only'>Enter chat message</label>
               <input class='form-control mx-auto w-75' type='text' value='' id='send_message_holder' placeholder='Enter chat message' autocomplete='off'/>
 	           <button type='submit' class='btn btn-default btn-primary'>Send</button>
@@ -145,7 +145,7 @@
 
     <div class='row'>
       <div class='col text-left'>
-          <div id='messages'>
+          <div id='messages' class="chat_color">
           </div>
       </div>
     </div>
