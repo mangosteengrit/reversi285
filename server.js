@@ -1,7 +1,5 @@
 /* Setup the static file server */
 /* Include the required static file webserver library */
-/* trying to get the dropbox files to sync */
-/* trying to get the dropbox files to sync - another row */
 var static = require('node-static');
 
 /* Include the required http web serer library e.g. receives request from internet */
@@ -681,7 +679,25 @@ function create_new_game()
 	var d = new Date();
 	new_game.last_move_time = d.getTime();
 
+	/* Immediate 12 lines after comment replace original game rules 
+	for random starter instead of black always starting
+	ORIGINAL code is the immediate 1 line below
 	new_game.whose_turn = 'black';
+	*/ 
+	var new_game_starting_player_valid_moves = {};
+	var who_starts = Math.floor((Math.random() * 10) + 1);
+	if (who_starts <= 5)
+	{
+		new_game.whose_turn = 'black';  
+	  	new_game_starting_player_valid_moves = 'b';
+	}
+	else 
+	{
+	  new_game.whose_turn = 'white';  
+	  new_game_starting_player_valid_moves = 'w';
+	}
+
+
 
 	new_game.board = 
 	[
@@ -695,7 +711,14 @@ function create_new_game()
 		[' ',' ',' ',' ',' ',' ',' ',' ',]
 	];
 
+	/* Immediate 1 line after comment is to accept who starts
+	from random who starts generate code right above new_game.board
+	ORIGINAL code is the immediate 1 line below (and return new_game is part of original code)
 	new_game.legal_moves = calculate_valid_moves('b',new_game.board);
+	*/
+	new_game.legal_moves = calculate_valid_moves(new_game_starting_player_valid_moves,new_game.board);
+
+
 	return new_game;
 }
 
@@ -959,7 +982,7 @@ function send_game_update(socket, game_id, message)
 	if(count == 0)
 	{
 		/* send a game over message */
-		var winnder = 'tie game';
+		var winner = 'tie game';
 		if(black > white)
 		{
 			winner = 'black';

@@ -32,7 +32,7 @@ td.hovered_over:hover
 
 .chat_color
 {
-  color:yellow;
+  color:#ffcc66;
 }
 
 .score_color
@@ -40,3 +40,17 @@ td.hovered_over:hover
   color:#20c997;
   font-weight:bold;
 }
+
+.my_color_and_timer
+{
+  color:#ffcc66;
+  font-weight:bold;
+}
+
+.game_over_color
+{
+  color:#ffcc66;
+  font-style:italic;
+}
+
+/* this is how to comment something out in a css file */
